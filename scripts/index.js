@@ -1,6 +1,3 @@
-// API 1: "https://jsonplaceholder.typicode.com/users"
-// API 2: "https://jsonplaceholder.typicode.com/posts?userId=:id"
-
 async function GetUsers() {
   const Response = await fetch("https://jsonplaceholder.typicode.com/users");
   const Data = await Response.json();
@@ -12,7 +9,7 @@ async function GetUsers() {
 GetUsers();
 
 function PostsZeigen(id) {
-    localStorage.setItem("id", id)  
+    localStorage.setItem("id", id)
     window.location.href = `${window.location.origin}/benutzer.html`
 }
 

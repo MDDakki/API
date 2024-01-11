@@ -11,8 +11,13 @@ async function GetUsers() {
 
 GetUsers();
 
+function PostsZeigen(id) {
+    localStorage.setItem("id", id)  
+    window.location.href = `${window.location.origin}/benutzer.html`
+}
+
 function BenutzerHTML(benutzer) {
-  return `<div class="benutzer-karte">
+  return `<div class="benutzer-karte" onclick="PostsZeigen(${benutzer.id})">
     <div class="benutzer-karte__container">
       <h3>${benutzer.name}</h4>
         <p><b>Email:</b> ${benutzer.email}</p>
